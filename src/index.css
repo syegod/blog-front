@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.markdown * {
+    all: revert;
+    word-break: break-all;
+}
+.markdown a {
+    color: rgb(47, 136, 238);
+}
+.markdown pre {
+    background: rgba(202, 202, 202, 0.836);
+    padding: .4rem .7rem;
+    border-radius: 5px;
+}
