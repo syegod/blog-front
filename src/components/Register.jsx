@@ -10,9 +10,7 @@ const Register = () => {
     const dispatch = useDispatch();
     const isAuth = useSelector(selectIsAuth);
 
-    if(isAuth){
-        return <Navigate to={'/'}/>
-    }
+    
     const handleFormSubmit = async (e) => {
         e.preventDefault();
         const data = await dispatch(fetchRegister(form));
@@ -24,6 +22,10 @@ const Register = () => {
     }  
     const handleFormChange = (e) => {
         setForm({...form, [e.target.name]:e.target.value});
+    }
+
+    if(isAuth){
+        window.location = '/';
     }
     return (
         <form className='flex flex-col gap-y-10 items-center text-xl mt-20 sm:mt-44 bg-white shadow mx-auto max-w-max p-10' onSubmit={handleFormSubmit}>

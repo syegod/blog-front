@@ -25,7 +25,7 @@ const Login = () => {
     }
 
     if(isAuth){
-        return <Navigate to={'/'}/>
+        window.location = '/';
     }
     
     return (
